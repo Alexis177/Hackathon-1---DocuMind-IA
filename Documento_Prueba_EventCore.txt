@@ -1,0 +1,32 @@
+EVENTCORE — DOCUMENTO DE PRUEBA PARA HACKATHON (DATOS FICTICIOS)
+
+1. Descripción
+EventCore es una plataforma académica para gestionar el acceso a eventos mediante entradas con códigos QR. El sistema evita que una misma entrada se utilice dos veces.
+
+2. Usuarios
+Los organizadores registran eventos, generan entradas y consultan estadísticas. El personal de acceso escanea códigos QR para validarlos. Los asistentes presentan su entrada al ingresar.
+
+3. Requisitos funcionales
+RF01: El organizador puede registrar un evento con nombre, fecha, sede y capacidad.
+RF02: El sistema genera un código QR único por entrada.
+RF03: El personal autorizado puede escanear el QR y consultar su estado.
+RF04: El sistema responde con uno de tres estados: válido, inválido o ya utilizado.
+RF05: Una entrada validada queda marcada como utilizada para impedir su reutilización.
+RF06: El organizador puede consultar la cantidad de asistentes ingresados.
+
+4. Tecnologías propuestas
+Frontend web con HTML, CSS y JavaScript. Backend con Node.js y Express. Base de datos MySQL. Los códigos QR se usan para validar entradas.
+
+5. Alcance
+En la primera versión no se procesan pagos ni se implementa reconocimiento biométrico. El sistema se enfoca únicamente en registrar eventos, emitir entradas y validar accesos.
+
+6. Seguridad
+Solo los usuarios autorizados pueden consultar registros de acceso. Se deben proteger los datos personales de los asistentes.
+
+7. Pruebas de aceptación
+Prueba A: registrar un evento y generar una entrada QR.
+Prueba B: escanear la entrada por primera vez; debe mostrar estado válido.
+Prueba C: intentar escanear la misma entrada de nuevo; debe mostrar ya utilizado.
+Prueba D: escanear un QR inexistente; debe mostrar inválido.
+
+Documento ficticio elaborado únicamente para realizar pruebas del asistente RAG. No representa un sistema en producción.
